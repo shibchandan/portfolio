@@ -7,7 +7,7 @@ export const projectsData = [
     fullDescription: "A decentralized offline payment routing network designed to enable secure peer-to-peer digital transactions in environments with zero internet connectivity. The system utilizes a custom Node.js client runtime connected to a native C++ cryptography engine for hardware-level signing, and synchronizes transactions across devices using a simulated wireless mesh network.",
     category: "Systems & Security",
     techStack: ["Node.js", "C++", "Windows CNG", "React", "MongoDB", "WebSockets"],
-    githubLink: "https://github.com/shibchandan/shadowpay",
+    githubLink: "https://github.com/shibchandan/ShadowPay",
     demoLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Standard placeholder link
     features: [
       "Dynamic P2P mesh network simulation using a custom gossip protocol to discover nearby nodes.",
@@ -39,7 +39,7 @@ export const projectsData = [
     fullDescription: "A systems-level network security engine engineered in C++ to capture and inspect raw network packets at wire-speed. The application intercepts traffic via libpcap, groups packets into individual TCP streams based on 5-tuple metrics, inspects application-layer data (TLS Handshakes, HTTP headers), and flags anomalous activity using a custom regex rules engine.",
     category: "Systems & Security",
     techStack: ["C++", "libpcap", "Node.js", "Express", "MongoDB", "React", "Tailwind CSS"],
-    githubLink: "https://github.com/shibchandan/dpi-firewall",
+    githubLink: "https://github.com/shibchandan/Packet_analyzer",
     demoLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     features: [
       "Kernel-level packet interception using Berkeley Packet Filters (BPF) and libpcap stream capture.",
@@ -71,7 +71,7 @@ export const projectsData = [
     fullDescription: "A comprehensive high-performance vector search engine engineered from scratch in C++17. It stores, indexes, and queries high-dimensional vector embeddings using custom HNSW and KD-Tree implementations. It interfaces with an asynchronous Node.js API gateway and a Vite/React frontend, running a completely local RAG pipeline powered by Ollama, Llama 3.2, and nomic-embed-text.",
     category: "AI & Infrastructure",
     techStack: ["C++17", "Ollama", "Llama 3.2", "React", "Node.js", "Express", "HTML5 Canvas"],
-    githubLink: "https://github.com/shibchandan/pragna-ai",
+    githubLink: "https://github.com/shibchandan/PragnaAI",
     features: [
       "Custom C++17 implementations of HNSW for log-time ANN search and KD-Trees for spatial indexing.",
       "Custom Binary Serialization protocol in C++ with zero text parsing overhead for saving/restoring database indices.",
@@ -103,7 +103,7 @@ export const projectsData = [
     fullDescription: "A robust academic document management and collaboration platform engineered to handle campus-wide file sharing and semantic text analysis. The project integrates an advanced directory system, automated malware checking, high-performance object storage, and multi-LLM artificial intelligence to answer questions directly from uploaded textbooks.",
     category: "Full Stack Platform",
     techStack: ["React", "Node.js", "Express", "MongoDB", "Cloudflare R2", "JWT", "LangChain"],
-    githubLink: "https://github.com/shibchandan/knowledge-hub",
+    githubLink: "https://github.com/shibchandan/campus-knowledge-hub",
     demoLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     features: [
       "Dynamic nested directory tree representing university courses, subjects, and resource materials.",
