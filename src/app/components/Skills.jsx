@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { skillsData } from "../data/skillsData";
 import { motion } from "framer-motion";
-import { Code, Server, Network, Brain, Laptop } from "lucide-react";
+import { Code, Server, Network, Brain, Laptop, BookOpen } from "lucide-react";
 
 export default function Skills() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -15,6 +15,12 @@ export default function Skills() {
       border: "hover:neon-border-blue",
       accent: "text-neon-blue",
       glow: "bg-neon-blue/10"
+    },
+    "Core Computer Science": {
+      icon: <BookOpen size={20} className="text-neon-purple" />,
+      border: "hover:neon-border-purple",
+      accent: "text-neon-purple",
+      glow: "bg-neon-purple/10"
     },
     "Systems & Security": {
       icon: <Network size={20} className="text-neon-blue" />,

@@ -10,6 +10,17 @@ export const skillsData = [
     ]
   },
   {
+    category: "Core Computer Science",
+    description: "Fundamental academic coursework focusing on computational theory and system design.",
+    items: [
+      { name: "Data Structures & Algorithms", rating: 95 },
+      { name: "Object-Oriented Programming", rating: 90 },
+      { name: "Operating Systems", rating: 85 },
+      { name: "Computer Networks", rating: 85 },
+      { name: "Database Management (DBMS)", rating: 85 }
+    ]
+  },
+  {
     category: "Systems & Security",
     description: "Low-level programming, network packet manipulation, and cryptographic integrations.",
     items: [
