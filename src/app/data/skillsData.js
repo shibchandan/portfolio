@@ -17,7 +17,9 @@ export const skillsData = [
       { name: "Object-Oriented Programming", rating: 90 },
       { name: "Operating Systems", rating: 85 },
       { name: "Computer Networks", rating: 85 },
-      { name: "Database Management (DBMS)", rating: 85 }
+      { name: "Database Management (DBMS)", rating: 85 },
+      { name: "Cryptography", rating: 85 },
+      { name: "Neural Networks", rating: 85 }
     ]
   },
   {
