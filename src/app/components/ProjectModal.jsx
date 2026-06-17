@@ -156,6 +156,17 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 Recruiter Proof Mode: Verified Architecture
               </span>
               <div className="flex gap-3 w-full sm:w-auto">
+                {project.demoLink && !project.demoLink.includes("youtube.com") && (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 sm:flex-initial flex items-center justify-center gap-2 bg-neon-blue/10 hover:bg-neon-blue/20 text-neon-blue border border-neon-blue/30 px-5 py-2.5 rounded-lg text-sm font-mono transition-all"
+                  >
+                    <ExternalLink size={16} />
+                    Live Website
+                  </a>
+                )}
                 <a
                   href={project.githubLink}
                   target="_blank"

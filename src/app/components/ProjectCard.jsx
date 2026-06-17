@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Play, ArrowUpRight } from "lucide-react";
+import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "./Icons";
 
 export default function ProjectCard({ project, onOpen }) {
@@ -88,6 +88,18 @@ export default function ProjectCard({ project, onOpen }) {
         >
           <GithubIcon size={16} />
         </a>
+        {project.demoLink && !project.demoLink.includes("youtube.com") && (
+          <a
+            href={project.demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="p-2 bg-slate-950 hover:bg-slate-900 border border-white/5 text-subtext-gray hover:text-neon-blue rounded-md transition-all"
+            title="Live Website"
+          >
+            <ExternalLink size={16} />
+          </a>
+        )}
 
       </div>
     </motion.div>

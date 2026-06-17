@@ -104,7 +104,7 @@ export const projectsData = [
     category: "Full Stack Platform",
     techStack: ["React", "Node.js", "Express", "MongoDB", "Cloudflare R2", "JWT", "LangChain"],
     githubLink: "https://github.com/shibchandan/campus-knowledge-hub",
-    demoLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    demoLink: "https://campus-knowledge-hub-client.vercel.app/colleges",
     features: [
       "Dynamic nested directory tree representing university courses, subjects, and resource materials.",
       "Object storage using Cloudflare R2 with pre-signed upload URLs and local disk storage fallback.",
