@@ -12,11 +12,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Shib Chandan Mistry | Systems & Full Stack Engineer",
-  description: "Developer Portfolio of Shib Chandan Mistry, 3rd Year B.Tech Computer Science student specializing in Systems Programming (C++), Network Security, AI Infrastructure, and High-Performance Web Architectures.",
-  keywords: ["Shib Chandan Mistry", "Software Engineer", "Systems Engineer", "Full Stack Developer", "C++ Developer", "MNNIT Allahabad", "Computer Science Portfolio"],
+  title: "Shib Chandan Mistry | Full Stack Software Developer",
+  description: "Developer Portfolio of Shib Chandan Mistry, 3rd Year B.Tech Computer Science student specializing in Full Stack Development, Scalable Web Architectures, and High-Performance Systems.",
+  keywords: ["Shib Chandan Mistry", "Software Engineer", "Full Stack Developer", "Web Developer", "React Developer", "MNNIT Allahabad", "Computer Science Portfolio"],
   openGraph: {
-    title: "Shib Chandan Mistry | Systems & Full Stack Engineer",
+    title: "Shib Chandan Mistry | Full Stack Software Developer",
     description: "Recruiter-focused engineering showcase featuring real-world packet interceptors, vector databases, and mesh gateways.",
     type: "website",
   },

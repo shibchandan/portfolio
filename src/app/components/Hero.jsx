@@ -31,7 +31,7 @@ export default function Hero() {
           {/* Welcome Tag */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/5 bg-slate-900/60 text-xs font-mono text-neon-blue select-none">
             <span className="w-2 h-2 rounded-full bg-neon-blue animate-pulse"></span>
-            Systems & Full Stack Specialist
+            Full Stack Software Developer
           </div>
 
           {/* Name */}
