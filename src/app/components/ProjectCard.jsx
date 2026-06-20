@@ -28,7 +28,7 @@ export default function ProjectCard({ project, onOpen }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className={`glass-card p-6 rounded-xl border border-white/5 flex flex-col justify-between h-full group ${categoryStyle} cursor-pointer`}
+      className={`glass-card p-6 rounded-xl flex flex-col justify-between h-full group ${categoryStyle} cursor-pointer`}
       onClick={() => onOpen(project)}
     >
       <div className="space-y-4">

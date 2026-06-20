@@ -117,7 +117,7 @@ export default function Contact() {
               {/* Email */}
               <div 
                 onClick={handleCopyEmail}
-                className="glass-card p-4 rounded-xl border border-slate-200 dark:border-white/5 flex items-center gap-4 cursor-pointer hover:border-blue-300 dark:hover:border-neon-blue/35 transition-all group bg-white/50 dark:bg-transparent shadow-sm dark:shadow-none"
+                className="glass-card p-4 rounded-xl flex items-center gap-4 cursor-pointer hover:border-blue-300 dark:hover:border-neon-blue/35 transition-all group shadow-sm dark:shadow-none"
               >
                 <div className="p-3 bg-blue-50 text-blue-600 group-hover:bg-blue-100 dark:bg-neon-blue/10 rounded-lg dark:text-neon-blue dark:group-hover:bg-neon-blue/20 transition-all">
                   <Mail size={20} />
@@ -131,7 +131,7 @@ export default function Contact() {
               </div>
 
               {/* Phone */}
-              <div className="glass-card p-4 rounded-xl border border-slate-200 dark:border-white/5 flex items-center gap-4 hover:border-emerald-300 dark:hover:border-neon-green/35 transition-all group bg-white/50 dark:bg-transparent shadow-sm dark:shadow-none">
+              <div className="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-emerald-300 dark:hover:border-neon-green/35 transition-all group shadow-sm dark:shadow-none">
                 <div className="p-3 bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 dark:bg-neon-green/10 rounded-lg dark:text-neon-green dark:group-hover:bg-neon-green/20 transition-all">
                   <Phone size={20} />
                 </div>
@@ -173,7 +173,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-7 glass-card p-6 md:p-8 rounded-xl border border-slate-200 dark:border-white/5 bg-white/50 dark:bg-transparent shadow-sm dark:shadow-none space-y-6"
+            className="lg:col-span-7 glass-card p-6 md:p-8 rounded-xl shadow-sm dark:shadow-none space-y-6"
           >
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white font-mono flex items-center gap-2">
               <Terminal size={20} className="text-emerald-600 dark:text-neon-green" />

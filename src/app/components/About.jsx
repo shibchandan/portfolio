@@ -115,7 +115,7 @@ export default function About() {
             </p>
 
             {/* Education Timeline */}
-            <div className="glass-card p-6 rounded-xl border border-slate-200 dark:border-white/5 space-y-4">
+            <div className="glass-card p-6 rounded-xl space-y-4">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-blue-100 dark:bg-neon-blue/10 rounded-lg text-blue-600 dark:text-neon-blue">
                   <GraduationCap size={24} />
@@ -145,7 +145,7 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                   key={idx}
-                  className="glass-card p-5 rounded-xl border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-slate-500/30 hover:bg-white/60 dark:hover:bg-slate-900/50 transition-all group cursor-pointer shadow-sm dark:shadow-none"
+                  className="glass-card p-5 rounded-xl hover:border-white/80 dark:hover:border-slate-500/30 transition-all group cursor-pointer shadow-sm dark:shadow-none"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <span className="font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-slate-300 transition-colors">

@@ -32,16 +32,17 @@ export default function RootLayout({ children }) {
     >
       <body className="bg-slate-50 dark:bg-dark-bg text-slate-900 dark:text-text-light font-sans min-h-full flex flex-col selection:bg-neon-blue selection:text-white antialiased transition-colors duration-300 relative">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          {/* Premium Background Orbs for Glassmorphism */}
-          <div className="fixed inset-0 z-[-1] pointer-events-none dark:hidden overflow-hidden">
-            <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-400/20 blur-[120px]" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-purple-400/20 blur-[140px]" />
-            <div className="absolute top-[20%] right-[-5%] w-[40%] h-[40%] rounded-full bg-emerald-400/15 blur-[100px]" />
+          {/* Premium Background Orbs for Glassmorphism (Vibrant) */}
+          <div className="fixed inset-0 z-[-1] pointer-events-none dark:hidden overflow-hidden bg-sky-50">
+            <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-300/50 blur-[120px]" />
+            <div className="absolute bottom-[-10%] left-[10%] w-[60%] h-[60%] rounded-full bg-lime-300/40 blur-[140px]" />
+            <div className="absolute top-[20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-fuchsia-300/40 blur-[130px]" />
+            <div className="absolute bottom-[20%] right-[10%] w-[40%] h-[40%] rounded-full bg-blue-400/30 blur-[100px]" />
           </div>
 
           <div className="fixed inset-0 z-[-1] pointer-events-none hidden dark:block overflow-hidden">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-neon-blue/10 blur-[120px]" />
-            <div className="absolute bottom-[-10%] right-[-5%] w-[50%] h-[50%] rounded-full bg-neon-purple/10 blur-[120px]" />
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-neon-blue/15 blur-[120px]" />
+            <div className="absolute bottom-[-10%] right-[-5%] w-[50%] h-[50%] rounded-full bg-neon-purple/15 blur-[120px]" />
           </div>
 
           {children}

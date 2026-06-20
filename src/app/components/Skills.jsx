@@ -78,7 +78,7 @@ export default function Skills() {
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`glass-card p-6 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col justify-between transition-all ${assets.border} h-full shadow-sm dark:shadow-none`}
+                className={`glass-card p-6 rounded-xl flex flex-col justify-between transition-all ${assets.border} h-full shadow-sm dark:shadow-none`}
               >
                 <div>
                   {/* Category Header */}

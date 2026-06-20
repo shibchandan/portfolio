@@ -79,7 +79,7 @@ export default function Terminal() {
   }, [visibleLines, typedText]);
 
   return (
-    <div className="w-full max-w-2xl glass-panel border border-white/40 dark:border-white/10 rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-2xl font-mono text-xs md:text-sm h-[320px] md:h-[400px] flex flex-col relative select-none bg-white/40 dark:bg-slate-950/60 backdrop-blur-xl">
+    <div className="w-full max-w-2xl glass-panel border border-white/40 dark:border-white/10 rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-2xl font-mono text-xs md:text-sm h-[320px] md:h-[400px] flex flex-col relative select-none backdrop-blur-xl">
       {/* Scanline Overlay */}
       <div className="absolute inset-0 pointer-events-none scanlines z-10 opacity-30"></div>
 
