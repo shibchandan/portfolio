@@ -59,15 +59,15 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-slate-900/35 relative">
+    <section id="about" className="py-24 bg-white/30 dark:bg-slate-900/35 relative">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Section Title */}
         <div className="flex flex-col items-center mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">
-            About <span className="text-slate-400">Me</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2 text-slate-900 dark:text-white">
+            About <span className="text-slate-500 dark:text-slate-400">Me</span>
           </h2>
-          <div className="w-12 h-1 bg-slate-700 rounded-full"></div>
+          <div className="w-12 h-1 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -85,7 +85,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-tr from-neon-green to-neon-blue rounded-2xl opacity-40 blur-xl group-hover:opacity-75 transition-opacity duration-500"></div>
               
               {/* Image Container */}
-              <div className="w-full h-full relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900 group-hover:border-slate-500/50 transition-all duration-300">
+              <div className="w-full h-full relative rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900 group-hover:border-slate-300 dark:group-hover:border-slate-500/50 transition-all duration-300">
                 <Image
                   src="/myPhoto.png"
                   alt="Shib Chandan Mistry"
@@ -106,26 +106,26 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-8 space-y-6"
           >
-            <h3 className="text-2xl font-bold text-white font-mono">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white font-mono">
               &gt; Engineering Credential
             </h3>
             
-            <p className="text-subtext-gray leading-relaxed text-base">
+            <p className="text-slate-700 dark:text-subtext-gray leading-relaxed text-base">
               I am a Computer Science undergraduate with a passion for designing secure protocols, high-concurrency systems, and AI search systems. My foundation is built on rigorous coursework and competitive programming, translating theoretical computer science directly into robust software.
             </p>
 
             {/* Education Timeline */}
-            <div className="glass-card p-6 rounded-xl border border-white/5 space-y-4">
+            <div className="glass-card p-6 rounded-xl border border-slate-200 dark:border-white/5 space-y-4">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-neon-blue/10 rounded-lg text-neon-blue">
+                <div className="p-3 bg-blue-100 dark:bg-neon-blue/10 rounded-lg text-blue-600 dark:text-neon-blue">
                   <GraduationCap size={24} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white">
+                  <h4 className="text-lg font-bold text-slate-900 dark:text-white">
                     Motilal Nehru National Institute of Technology (MNNIT)
                   </h4>
                   <p className="text-sm text-neon-blue font-mono">Allahabad, India • 2023 - 2027</p>
-                  <p className="text-base text-slate-200 mt-1 font-semibold">
+                  <p className="text-base text-slate-700 dark:text-slate-200 mt-1 font-semibold">
                     Bachelor of Technology in Computer Science & Engineering
                   </p>
                 </div>
@@ -133,7 +133,7 @@ export default function About() {
             </div>
 
             {/* Achievements / Profiles Title */}
-            <h4 className="text-lg font-bold text-white font-mono pt-2">
+            <h4 className="text-lg font-bold text-slate-900 dark:text-white font-mono pt-2">
               &gt; Competitive Programming Statistics
             </h4>
 
@@ -145,19 +145,19 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                   key={idx}
-                  className="glass-card p-5 rounded-xl border border-white/5 hover:border-slate-500/30 hover:bg-slate-900/50 transition-all group cursor-pointer"
+                  className="glass-card p-5 rounded-xl border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-slate-500/30 hover:bg-white/60 dark:hover:bg-slate-900/50 transition-all group cursor-pointer shadow-sm dark:shadow-none"
                 >
                   <div className="flex items-center justify-between mb-3">
-                    <span className="font-bold text-white group-hover:text-slate-300 transition-colors">
+                    <span className="font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-slate-300 transition-colors">
                       {stat.title}
                     </span>
-                    <div className="text-subtext-gray group-hover:text-white transition-colors">
+                    <div className="text-slate-400 dark:text-subtext-gray group-hover:text-blue-600 dark:group-hover:text-white transition-colors">
                       {stat.icon}
                     </div>
                   </div>
-                  <div className="font-mono text-slate-300 text-sm font-semibold">{stat.metric}</div>
-                  <div className="text-xs text-slate-500 font-mono mb-2 group-hover:text-neon-blue transition-colors">{stat.sub}</div>
-                  <p className="text-xs text-subtext-gray leading-relaxed">{stat.desc}</p>
+                  <div className="font-mono text-slate-700 dark:text-slate-300 text-sm font-semibold">{stat.metric}</div>
+                  <div className="text-xs text-slate-500 font-mono mb-2 group-hover:text-blue-600 dark:group-hover:text-neon-blue transition-colors">{stat.sub}</div>
+                  <p className="text-xs text-slate-600 dark:text-subtext-gray leading-relaxed">{stat.desc}</p>
                 </a>
               ))}
             </div>

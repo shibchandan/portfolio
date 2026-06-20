@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +28,12 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="bg-dark-bg text-text-light font-sans min-h-full flex flex-col selection:bg-neon-blue selection:text-white antialiased">
-        {children}
+      <body className="bg-slate-50 dark:bg-dark-bg text-slate-900 dark:text-text-light font-sans min-h-full flex flex-col selection:bg-neon-blue selection:text-white antialiased transition-colors duration-300">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

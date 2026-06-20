@@ -79,7 +79,7 @@ export default function Terminal() {
   }, [visibleLines, typedText]);
 
   return (
-    <div className="w-full max-w-2xl glass-panel border border-white/10 rounded-lg overflow-hidden shadow-2xl font-mono text-xs md:text-sm h-[320px] md:h-[400px] flex flex-col relative select-none">
+    <div className="w-full max-w-2xl glass-panel border border-slate-300 dark:border-white/10 rounded-lg overflow-hidden shadow-2xl font-mono text-xs md:text-sm h-[320px] md:h-[400px] flex flex-col relative select-none bg-white/70 dark:bg-slate-950/60">
       {/* Scanline Overlay */}
       <div className="absolute inset-0 pointer-events-none scanlines z-10 opacity-30"></div>
 
@@ -90,7 +90,7 @@ export default function Terminal() {
           <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
         </div>
-        <div className="text-subtext-gray/80 text-[10px] md:text-xs">shibchandan@mnnit: ~</div>
+        <div className="text-slate-500 dark:text-subtext-gray/80 text-[10px] md:text-xs">shibchandan@mnnit: ~</div>
         <div className="w-4"></div>
       </div>
 
@@ -99,27 +99,27 @@ export default function Terminal() {
         {visibleLines.map((line, idx) => {
           if (line.type === "input") {
             return (
-              <div key={idx} className="flex text-neon-blue">
-                <span className="text-neon-green mr-2">shibchandan@mnnit:~$</span>
+              <div key={idx} className="flex text-blue-600 dark:text-neon-blue">
+                <span className="text-emerald-600 dark:text-neon-green mr-2">shibchandan@mnnit:~$</span>
                 <span>{line.text.replace("shibchandan@mnnit:~$ ", "")}</span>
               </div>
             );
           } else if (line.type === "output-code") {
             return (
-              <pre key={idx} className="text-purple-300 pl-4 whitespace-pre overflow-x-auto select-text leading-relaxed">
+              <pre key={idx} className="text-purple-700 dark:text-purple-300 pl-4 whitespace-pre overflow-x-auto select-text leading-relaxed">
                 {line.text}
               </pre>
             );
           } else if (line.type === "output-success") {
             return (
-              <div key={idx} className="text-neon-green pl-4 leading-relaxed flex items-start">
+              <div key={idx} className="text-emerald-600 dark:text-neon-green pl-4 leading-relaxed flex items-start">
                 <span className="mr-2">&gt;&gt;</span>
                 <span className="select-text">{line.text}</span>
               </div>
             );
           } else {
             return (
-              <div key={idx} className="text-slate-300 pl-4 leading-relaxed select-text">
+              <div key={idx} className="text-slate-700 dark:text-slate-300 pl-4 leading-relaxed select-text">
                 {line.text}
               </div>
             );
@@ -128,10 +128,10 @@ export default function Terminal() {
 
         {/* Typing Line */}
         {currentLineIndex < terminalLines.length && terminalLines[currentLineIndex].type === "input" && (
-          <div className="flex text-neon-blue">
-            <span className="text-neon-green mr-2">shibchandan@mnnit:~$</span>
+          <div className="flex text-blue-600 dark:text-neon-blue">
+            <span className="text-emerald-600 dark:text-neon-green mr-2">shibchandan@mnnit:~$</span>
             <span>{typedText.replace("shibchandan@mnnit:~$ ", "")}</span>
-            <span className="w-2 h-4 bg-neon-blue animate-pulse ml-0.5"></span>
+            <span className="w-2 h-4 bg-blue-600 dark:bg-neon-blue animate-pulse ml-0.5"></span>
           </div>
         )}
 

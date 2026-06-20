@@ -31,13 +31,13 @@ export default function Projects() {
         
         {/* Section Title */}
         <div className="flex flex-col items-center mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">
-            Engineering <span className="text-slate-400">Projects</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-2 text-slate-900 dark:text-white">
+            Engineering <span className="text-slate-500 dark:text-slate-400">Projects</span>
           </h2>
-          <p className="text-subtext-gray text-sm md:text-base max-w-lg mt-2 font-mono">
+          <p className="text-slate-600 dark:text-subtext-gray text-sm md:text-base max-w-lg mt-2 font-mono">
             Click any project to inspect its architecture, design patterns, and low-level code mechanics.
           </p>
-          <div className="w-12 h-1 bg-slate-700 rounded-full mt-4"></div>
+          <div className="w-12 h-1 bg-slate-300 dark:bg-slate-700 rounded-full mt-4"></div>
         </div>
 
         {/* Filter Buttons */}
@@ -48,8 +48,8 @@ export default function Projects() {
               onClick={() => setFilter(category)}
               className={`font-mono text-xs px-4 py-2 rounded-lg border transition-all cursor-pointer select-none ${
                 filter === category
-                  ? "bg-white text-slate-900 border-white shadow-md shadow-white/5 font-bold"
-                  : "bg-slate-900/50 text-subtext-gray border-white/5 hover:border-white/10 hover:text-white"
+                  ? "bg-blue-600 dark:bg-white text-white dark:text-slate-900 border-blue-600 dark:border-white shadow-md shadow-blue-600/20 dark:shadow-white/5 font-bold"
+                  : "bg-white/50 dark:bg-slate-900/50 text-slate-600 dark:text-subtext-gray border-slate-200 dark:border-white/5 hover:border-slate-400 dark:hover:border-white/10 hover:text-slate-900 dark:hover:text-white"
               }`}
             >
               {category}

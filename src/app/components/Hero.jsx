@@ -29,27 +29,27 @@ export default function Hero() {
           className="lg:col-span-7 space-y-6 text-center lg:text-left"
         >
           {/* Welcome Tag */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/5 bg-slate-900/60 text-xs font-mono text-neon-blue select-none">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-300 dark:border-white/5 bg-white/60 dark:bg-slate-900/60 text-xs font-mono text-neon-blue select-none shadow-sm dark:shadow-none">
             <span className="w-2 h-2 rounded-full bg-neon-blue animate-pulse"></span>
             Full Stack Software Developer
           </div>
 
           {/* Name */}
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             Hi, I'm <br className="hidden md:inline" />
-            <span className="bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent filter drop-shadow-sm select-all">
+            <span className="bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 bg-clip-text text-transparent filter drop-shadow-sm select-all">
               Shib Chandan Mistry
             </span>
           </h1>
 
           {/* Tagline */}
-          <p className="text-xl md:text-2xl font-mono text-neon-green font-semibold">
+          <p className="text-xl md:text-2xl font-mono text-emerald-600 dark:text-neon-green font-semibold">
             &gt; Building High-Performance Architectures
           </p>
 
           {/* Intro Description */}
-          <p className="text-base md:text-lg text-subtext-gray max-w-xl leading-relaxed select-text">
-            Third-year B.Tech CSE student at <strong className="text-white">MNNIT Allahabad</strong>. 
+          <p className="text-base md:text-lg text-slate-600 dark:text-subtext-gray max-w-xl leading-relaxed select-text">
+            Third-year B.Tech CSE student at <strong className="text-slate-900 dark:text-white">MNNIT Allahabad</strong>. 
             Designing kernel-level analyzers, hardware-signed P2P transaction gateways, and custom index vector search engines to solve real-world system bottlenecks.
           </p>
 
@@ -57,7 +57,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start pt-2">
             <button
               onClick={scrollToProjects}
-              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white hover:bg-slate-200 text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg cursor-pointer transform hover:scale-[1.02] active:scale-95 transition-all"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-neon-blue hover:bg-blue-600 dark:bg-white dark:hover:bg-slate-200 text-white dark:text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg cursor-pointer transform hover:scale-[1.02] active:scale-95 transition-all"
             >
               View Projects
               <ArrowRight size={18} />
@@ -66,7 +66,7 @@ export default function Hero() {
             <a
               href="/resume.pdf"
               download
-              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900 border border-white/10 hover:border-white/20 text-text-light px-6 py-3 rounded-lg font-mono text-sm tracking-wide transition-all"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white dark:bg-slate-900 border border-slate-300 dark:border-white/10 hover:border-slate-400 dark:hover:border-white/20 text-slate-800 dark:text-text-light px-6 py-3 rounded-lg font-mono text-sm tracking-wide shadow-sm dark:shadow-none transition-all"
             >
               <FileDown size={18} />
               Download Resume
