@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const terminalLines = [
   { text: "shibchandan@mnnit:~$ whoami", delay: 500, type: "input" },
-  { text: "Shib Chandan Mistry | Systems & Full Stack Engineer (MNNIT Allahabad)", delay: 800, type: "output" },
+  { text: "Shib Chandan Mistry | Full Stack Software Developer (MNNIT Allahabad)", delay: 800, type: "output" },
   { text: "shibchandan@mnnit:~$ cat config.json", delay: 600, type: "input" },
   { text: "{\n  \"focus\": \"Systems Programming, AI Infra, Network Security\",\n  \"languages\": [\"C++\", \"Java\", \"JavaScript\", \"SQL\"],\n  \"leetCodeRating\": 1703,\n  \"problemsSolved\": \"920+\"\n}", delay: 1200, type: "output-code" },
   { text: "shibchandan@mnnit:~$ ./validate_crypto_gates", delay: 500, type: "input" },
