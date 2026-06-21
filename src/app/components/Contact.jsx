@@ -9,6 +9,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle, submitting, success, error
   const [logs, setLogs] = useState([]);
+  const [formError, setFormError] = useState("");
 
   const socialLinks = [
     { name: "GitHub", href: "https://github.com/shibchandan", icon: <GithubIcon size={20} />, color: "hover:text-slate-900 dark:hover:text-white" },
@@ -23,7 +24,12 @@ export default function Contact() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+    setFormError("");
+    
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setFormError("[-] WARNING: All fields must be filled to transmit message.");
+      return;
+    }
 
     setStatus("submitting");
     setLogs(["[*] Contact API gate activated...", "[*] Validating email parameters..."]);
@@ -191,7 +197,6 @@ export default function Contact() {
                     autoComplete="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    required
                     placeholder="Enter your name"
                     className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-text-light focus:outline-none focus:border-slate-500 dark:focus:border-white focus:bg-white dark:focus:bg-slate-900 transition-all"
                   />
@@ -206,7 +211,6 @@ export default function Contact() {
                     autoComplete="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    required
                     placeholder="name@company.com"
                     className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-text-light focus:outline-none focus:border-slate-500 dark:focus:border-white focus:bg-white dark:focus:bg-slate-900 transition-all"
                   />
@@ -220,12 +224,17 @@ export default function Contact() {
                     autoComplete="off"
                     value={formData.message}
                     onChange={handleInputChange}
-                    required
                     rows={4}
                     placeholder="Write detailed specifications..."
                     className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-text-light focus:outline-none focus:border-slate-500 dark:focus:border-white focus:bg-white dark:focus:bg-slate-900 transition-all resize-none"
                   ></textarea>
                 </div>
+
+                {formError && (
+                  <div className="text-red-500 dark:text-red-400 text-xs font-bold bg-red-100 dark:bg-red-900/20 p-3 rounded-lg border border-red-200 dark:border-red-500/30">
+                    {formError}
+                  </div>
+                )}
 
                 <button
                   type="submit"
