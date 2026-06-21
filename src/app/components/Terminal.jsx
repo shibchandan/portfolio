@@ -10,7 +10,7 @@ export default function Terminal() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    fetch("/api/stats")
+    fetch(`/api/stats?t=${Date.now()}`)
       .then((res) => {
         if (res.ok) return res.json();
       })

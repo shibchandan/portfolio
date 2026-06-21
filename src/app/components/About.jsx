@@ -14,7 +14,7 @@ export default function About() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/stats")
+    fetch(`/api/stats?t=${Date.now()}`)
       .then((res) => {
         if (res.ok) return res.json();
         throw new Error("Stats API failed");

@@ -34,7 +34,7 @@ export async function GET() {
         `,
         variables: { username: "shib11" }
       }),
-      next: { revalidate: 3600 } // Cache for 1 hour
+      next: { revalidate: 300 } // Cache for 5 mins
     });
     
     if (leetcodeRes.ok) {
@@ -63,7 +63,7 @@ export async function GET() {
 
     const cfInfoRes = await fetch("https://codeforces.com/api/user.info?handles=shibchandan11", {
       signal: controller.signal,
-      next: { revalidate: 3600 }
+      next: { revalidate: 300 }
     });
     
     clearTimeout(timeoutId);
@@ -88,7 +88,7 @@ export async function GET() {
 
     const cfStatusRes = await fetch("https://codeforces.com/api/user.status?handle=shibchandan11", {
       signal: controller.signal,
-      next: { revalidate: 3600 }
+      next: { revalidate: 300 }
     });
 
     clearTimeout(timeoutId);
@@ -114,7 +114,7 @@ export async function GET() {
   // Set Cache Headers for client requests
   return NextResponse.json(stats, {
     headers: {
-      "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=600"
+      "Cache-Control": "public, s-maxage=300, stale-while-revalidate=60"
     }
   });
 }
