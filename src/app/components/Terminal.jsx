@@ -2,31 +2,48 @@
 
 import React, { useState, useEffect, useRef } from "react";
 
-const terminalLines = [
-  { text: "shibchandan@mnnit:~$ whoami", delay: 500, type: "input" },
-  { text: "Shib Chandan Mistry | Full Stack Software Developer (MNNIT Allahabad)", delay: 800, type: "output" },
-  { text: "shibchandan@mnnit:~$ cat config.json", delay: 600, type: "input" },
-  { text: "{\n  \"focus\": \"Systems Programming, AI Infra, Network Security\",\n  \"languages\": [\"C++\", \"Java\", \"JavaScript\", \"SQL\"],\n  \"leetCodeRating\": 1703,\n  \"problemsSolved\": \"920+\"\n}", delay: 1200, type: "output-code" },
-  { text: "shibchandan@mnnit:~$ ./validate_crypto_gates", delay: 500, type: "input" },
-  { text: "[*] Initializing Windows CNG module...", delay: 300, type: "output" },
-  { text: "[+] AES-256-GCM cipher initialized", delay: 200, type: "output-success" },
-  { text: "[+] RSA-2048 keypair generated successfully", delay: 200, type: "output-success" },
-  { text: "[+] Sealed transaction metadata. No double-spending detected.", delay: 400, type: "output-success" },
-  { text: "shibchandan@mnnit:~$ ./run_dpi_engine --file=traffic.pcap", delay: 600, type: "input" },
-  { text: "[info] Capturing raw packets via kernel BPF...", delay: 300, type: "output" },
-  { text: "[info] Grouping streams into 5-tuple sessions...", delay: 400, type: "output" },
-  { text: "[info] Inspected 2,492 TCP frames. Found 0 network anomalies.", delay: 500, type: "output" },
-  { text: "shibchandan@mnnit:~$ ./run_pragna_search --query=\"RAG embeddings\"", delay: 700, type: "input" },
-  { text: "Traversing HNSW layers... Dynamic node insertion completed.", delay: 400, type: "output" },
-  { text: "Nearest neighbor found! Cosine Similarity: 0.9412", delay: 500, type: "output-success" },
-  { text: "shibchandan@mnnit:~$ clear", delay: 1000, type: "input" }
-];
-
 export default function Terminal() {
   const [visibleLines, setVisibleLines] = useState([]);
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [typedText, setTypedText] = useState("");
+  const [stats, setStats] = useState({ leetCodeRating: 1703, problemsSolved: "920+" });
   const containerRef = useRef(null);
+
+  useEffect(() => {
+    fetch("/api/stats")
+      .then((res) => {
+        if (res.ok) return res.json();
+      })
+      .then((data) => {
+        if (data && data.leetcode) {
+          setStats({
+            leetCodeRating: data.leetcode.rating,
+            problemsSolved: data.leetcode.solved + "+"
+          });
+        }
+      })
+      .catch((err) => console.error("Terminal stats fetch error:", err));
+  }, []);
+
+  const terminalLines = [
+    { text: "shibchandan@mnnit:~$ whoami", delay: 500, type: "input" },
+    { text: "Shib Chandan Mistry | Full Stack Software Developer (MNNIT Allahabad)", delay: 800, type: "output" },
+    { text: "shibchandan@mnnit:~$ cat config.json", delay: 600, type: "input" },
+    { text: `{\n  "focus": "Systems Programming, AI Infra, Network Security",\n  "languages": ["C++", "Java", "JavaScript", "SQL"],\n  "leetCodeRating": ${stats.leetCodeRating},\n  "problemsSolved": "${stats.problemsSolved}"\n}`, delay: 1200, type: "output-code" },
+    { text: "shibchandan@mnnit:~$ ./validate_crypto_gates", delay: 500, type: "input" },
+    { text: "[*] Initializing Windows CNG module...", delay: 300, type: "output" },
+    { text: "[+] AES-256-GCM cipher initialized", delay: 200, type: "output-success" },
+    { text: "[+] RSA-2048 keypair generated successfully", delay: 200, type: "output-success" },
+    { text: "[+] Sealed transaction metadata. No double-spending detected.", delay: 400, type: "output-success" },
+    { text: "shibchandan@mnnit:~$ ./run_dpi_engine --file=traffic.pcap", delay: 600, type: "input" },
+    { text: "[info] Capturing raw packets via kernel BPF...", delay: 300, type: "output" },
+    { text: "[info] Grouping streams into 5-tuple sessions...", delay: 400, type: "output" },
+    { text: "[info] Inspected 2,492 TCP frames. Found 0 network anomalies.", delay: 500, type: "output" },
+    { text: "shibchandan@mnnit:~$ ./run_pragna_search --query=\"RAG embeddings\"", delay: 700, type: "input" },
+    { text: "Traversing HNSW layers... Dynamic node insertion completed.", delay: 400, type: "output" },
+    { text: "Nearest neighbor found! Cosine Similarity: 0.9412", delay: 500, type: "output-success" },
+    { text: "shibchandan@mnnit:~$ clear", delay: 1000, type: "input" }
+  ];
 
   useEffect(() => {
     if (currentLineIndex >= terminalLines.length) {
