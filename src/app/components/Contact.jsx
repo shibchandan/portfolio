@@ -183,7 +183,7 @@ export default function Contact() {
             {status !== "success" ? (
               <form onSubmit={handleFormSubmit} className="space-y-4 font-mono text-sm">
                 <div>
-                  <label htmlFor="name" className="block text-xs text-slate-600 dark:text-subtext-gray mb-1.5 uppercase tracking-wide">Name</label>
+                  <label htmlFor="name" className="block text-xs text-slate-600 dark:text-subtext-gray mb-1.5 uppercase tracking-wide">Name <span className="text-red-500 ml-0.5">*</span></label>
                   <input
                     id="name"
                     type="text"
@@ -198,7 +198,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-xs text-slate-600 dark:text-subtext-gray mb-1.5 uppercase tracking-wide">Email Address</label>
+                  <label htmlFor="email" className="block text-xs text-slate-600 dark:text-subtext-gray mb-1.5 uppercase tracking-wide">Email Address <span className="text-red-500 ml-0.5">*</span></label>
                   <input
                     id="email"
                     type="email"
@@ -213,7 +213,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-xs text-slate-600 dark:text-subtext-gray mb-1.5 uppercase tracking-wide">Message Payload</label>
+                  <label htmlFor="message" className="block text-xs text-slate-600 dark:text-subtext-gray mb-1.5 uppercase tracking-wide">Message Payload <span className="text-red-500 ml-0.5">*</span></label>
                   <textarea
                     id="message"
                     name="message"
